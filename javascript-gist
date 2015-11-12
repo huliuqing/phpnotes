@@ -1,0 +1,30 @@
+var clearTimer;
+/**
+* 设置计时器,
+* duration：计时时间
+* display:  元素对象
+*/
+function startTimer(duration, display) {
+	  if( clearTimer!==false ) return;
+    var timer = duration, minutes, seconds;
+    clearTimer = setInterval(function () {
+    	if (--timer <= 0) {
+          clearInterval(clearTimer);
+          clearTimer=false;
+	        return;	        
+          // timer = duration;
+        }
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+	    display.addClass("disabled"); 
+		display.attr("disabled", true);
+	    display.css({"background":"#CCCCCC"});
+      display.text("(" + seconds + ")");
+
+        
+    }, 1000);
+}
