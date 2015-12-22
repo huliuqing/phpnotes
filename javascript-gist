@@ -47,3 +47,8 @@ var interval = setInterval(function(){
 }, 1000);
 })();
 
+
+//----------------------------------------
+//javascript  trim
+txt.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,'');
+//@link http://stackoverflow.com/a/498995/1969039
