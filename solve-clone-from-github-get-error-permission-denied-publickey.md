@@ -24,7 +24,7 @@ step1. 我们需要使用Git工具[生成SSH宻钥数据](https://help.github.co
 
 > 1 打开 Git Bash工具
 
-> 2 输入命令:  *ssh-keygen -t -ras -b -C 'your_email@examle.com'*
+> 2 输入命令:  *ssh-keygen -t -ras -b 4096  -C 'your_email@examle.com'*
 
 > 3 当看到"Enter a file in which to save the key"提示消息，*直接按回车键*。
 表示使用默认的目录生成宻钥数据
